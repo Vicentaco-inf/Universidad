@@ -1,0 +1,124 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4478,        116]
+NotebookOptionsPosition[      4199,        102]
+NotebookOutlinePosition[      4534,        117]
+CellTagsIndexPosition[      4491,        114]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Ej3", "[", "n_", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"cadena", ",", "i", ",", "rand", ",", "genRegla0"}], "}"}], ",",
+      "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"cadena", "=", " ", 
+       RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"genRegla0", " ", "=", " ", 
+       RowBox[{"{", 
+        RowBox[{"b", ",", "c", ",", "c", ",", "b", ",", "c", ",", "c"}], 
+        "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"For", "[", 
+       RowBox[{
+        RowBox[{"i", " ", "=", " ", "0"}], ",", " ", 
+        RowBox[{"i", " ", "\[LessEqual]", " ", 
+         RowBox[{"n", "-", "1"}]}], ",", 
+        RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"rand", " ", "=", " ", 
+          RowBox[{"RandomInteger", "[", "1", "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"(*", 
+          RowBox[{
+           RowBox[{
+           "Sacamos", " ", "un", " ", "numero", " ", "random", " ", "entre", 
+            " ", "0", " ", "y", " ", "1", " ", "para", " ", "emular", " ", 
+            "la", " ", "aleatoreidad", " ", "entre", " ", "la", " ", 
+            "selecci\[OAcute]n", " ", "de", " ", "las", " ", "2", " ", 
+            "reglas", " ", "que", " ", "existen", " ", "en", " ", "este", " ",
+             "sistema", " ", "P"}], ",", " ", 
+           RowBox[{
+            RowBox[{
+            "donde", " ", "el", " ", "0", " ", "ser\[AAcute]", " ", "la", " ",
+              "regla", " ", "a"}], " ", "\[Rule]", " ", 
+            RowBox[{
+             RowBox[{
+             "a", " ", "bint", " ", "cint", " ", "cint", " ", "y", " ", "el", 
+              " ", "1", " ", "ser\[AAcute]", " ", "la", " ", "regla", " ", 
+              "a"}], " ", "\[Rule]", " ", 
+             RowBox[{"aout", " ", "aout"}]}]}]}], "*)"}], 
+         "\[IndentingNewLine]", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"rand", " ", "\[Equal]", " ", "0"}], ",", " ", 
+           "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{
+            "si", " ", "se", " ", "ejecuta", " ", "la", " ", "regla", " ", 
+             "0", " ", "se", " ", "genera", " ", "una", " ", "nueva", " ", 
+             "bccbcc"}], "*)"}], "\[IndentingNewLine]", 
+           RowBox[{"cadena", " ", "=", " ", 
+            RowBox[{"Join", "[", 
+             RowBox[{"cadena", ",", "genRegla0"}], "]"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{
+             RowBox[{"si", " ", "no"}], ",", " ", 
+             RowBox[{
+             "se", " ", "para", " ", "la", " ", "ejecuci\[OAcute]n"}]}], 
+            "*)"}], "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"Return", "[", "cadena", "]"}], ";"}]}], 
+          "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]", "]"}],
+       ";", "\[IndentingNewLine]", 
+      RowBox[{"Return", "[", "cadena", "]"}], ";"}]}], "\[IndentingNewLine]", 
+    "]"}]}], "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.768049762420773*^9, 3.768049792542347*^9}, {
+   3.768049843198476*^9, 3.768049850782205*^9}, {3.768049882637397*^9, 
+   3.76804993173475*^9}, {3.7680499645585127`*^9, 3.768050008272731*^9}, {
+   3.7680500392263603`*^9, 3.7680504255723667`*^9}, 3.768050465483452*^9, {
+   3.768050510158567*^9, 3.768050598187912*^9}, {3.7680506465151043`*^9, 
+   3.7680508643285923`*^9}, {3.768050917880732*^9, 3.768050946005886*^9}, 
+   3.768050979250555*^9}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7680509736004257`*^9, 3.768050973618681*^9}}]
+},
+WindowSize->{808, 911},
+WindowMargins->{{Automatic, 465}, {0, Automatic}},
+FrontEndVersion->"10.4 for Linux x86 (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3540, 77, 429, "Input"],
+Cell[4101, 99, 94, 1, 32, InheritFromParent]
+}
+]
+*)
+
